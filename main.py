@@ -7,9 +7,10 @@ import streamlit as st
 import tempfile
 
 
+api = st.text_input("Gemini API: ")
 
 # Configure Gemini API
-GEMINI_API_KEY = "AIzaSyA7dPzirWJrcxYaVtk8lP4RrGKnXhtIpcM"
+GEMINI_API_KEY = api
 genai.configure(api_key=GEMINI_API_KEY)
 
 st.title("Sebastião")
@@ -160,4 +161,5 @@ if prompt and prompt.files:
 
 elif prompt and not prompt.files:
     st.warning("Please attach an image for face verification.")
+
 
