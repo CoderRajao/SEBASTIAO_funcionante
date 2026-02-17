@@ -6,6 +6,8 @@ from PIL import Image
 import streamlit as st
 import tempfile
 
+
+
 # Configure Gemini API
 GEMINI_API_KEY = "AIzaSyA7dPzirWJrcxYaVtk8lP4RrGKnXhtIpcM"
 genai.configure(api_key=GEMINI_API_KEY)
@@ -158,3 +160,4 @@ if prompt and prompt.files:
 
 elif prompt and not prompt.files:
     st.warning("Please attach an image for face verification.")
+
